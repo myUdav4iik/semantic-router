@@ -65,7 +65,7 @@ single-profile configs.
 - [x] T5 extproc request-entry entrypoint resolution before signal evaluation
 - [x] T6 `/v1/models` lists entrypoint model names
 - [x] T7 multi-recipe unit tests in config and extproc
-- [ ] T8 config-contract docs, reference config, and tutorials
+- [x] T8 config-contract docs, reference config, and tutorials
 - [x] T9 E2E coverage for multi-recipe entrypoints
 - [ ] T10 DSL round-trip for recipes and entrypoints (follow-up PR)
 - [ ] T11 CLI and operator surfaces (follow-up PR)
@@ -73,12 +73,12 @@ single-profile configs.
 
 ## Next Action
 
-The runtime PR (#2613, stacked on #2612) is complete: T5–T7 plus T9 E2E.
-T8 docs ride with the config-contract PR (#2612). T3 stays pending the
-maintainer confirmation recorded in Open Decisions. Deferred from T5: signal
-evaluation runs over the global registry filtered by all recipes' decisions;
-scoping the evaluated signal set to the per-request recipe is a performance
-follow-up, not a correctness gap.
+T1–T9 are complete across the stacked PR pair: #2612 carries the config
+contract (T1, T2, T4, T8) and #2613 carries the runtime (T5–T7, T9). T3 stays
+pending the maintainer confirmation recorded in Open Decisions. Deferred from
+T5: signal evaluation runs over the global registry filtered by all recipes'
+decisions; scoping the evaluated signal set to the per-request recipe is a
+performance follow-up, not a correctness gap.
 
 ## Operating Rules
 
