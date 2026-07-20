@@ -62,7 +62,7 @@ single-profile configs.
 - [ ] T3 cross-surface validation for entrypoint and recipe mappings
 - [x] T4 canonical export and config dump emit normalized entrypoints and
       recipes
-- [ ] T5 extproc request-entry entrypoint resolution before signal evaluation
+- [x] T5 extproc request-entry entrypoint resolution before signal evaluation
 - [ ] T6 `/v1/models` lists entrypoint model names
 - [ ] T7 multi-recipe unit tests in config and extproc
 - [ ] T8 config-contract docs, reference config, and tutorials
@@ -73,8 +73,11 @@ single-profile configs.
 
 ## Next Action
 
-Land T5 (extproc request-entry entrypoint resolution). T3 stays pending the
-maintainer confirmation recorded in Open Decisions.
+Land T6 (`/v1/models` lists entrypoint model names). T3 stays pending the
+maintainer confirmation recorded in Open Decisions. Deferred from T5: signal
+evaluation runs over the global registry filtered by all recipes' decisions;
+scoping the evaluated signal set to the per-request recipe is a performance
+follow-up, not a correctness gap.
 
 ## Operating Rules
 
